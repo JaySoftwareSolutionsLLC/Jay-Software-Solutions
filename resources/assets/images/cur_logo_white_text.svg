@@ -10,7 +10,7 @@
   </g>
 
   <!-- Bird -->
-  <g class='logo-svg-bird' fill='none' stroke='hsla(205, 100%, 44%, 1)'>
+  <g class='logo-svg-bird' fill='none' stroke='hsla(198, 75%, 55%, 1)'>
     <!-- Frame -->
     <g class='logo-svg-frame' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'>
       <!-- Tail | Left Wing | Right Wing | Head -->
@@ -20,7 +20,7 @@
       <g class='logo-svg-head'>
         <polyline class='logo-svg-head' points='880,155 885,120 870,100 930,100 950,125 965,135 910,165'/>
         <!-- EYE -->
-        <g class='logo-svg-eye logo-svg-head' transform='translate(915, 113)' stroke-linejoin='round' fill='hsla(205, 100%, 44%, 1)' stroke='none'>
+        <g class='logo-svg-eye logo-svg-head' transform='translate(915, 113)' stroke-linejoin='round' fill='hsla(198, 75%, 55%, 1)' stroke='none'>
           <!-- Option 1: Rounded -->
           <rect x='0' y='0' height='13' width='13' rx='2' ry='2'/>
           <!-- Option 2: Square -->
@@ -30,7 +30,7 @@
           <!-- <polygon points='0,15 13,15 15,19 -2,19'/> -->
         </g>
         <!-- BEAK -->
-        <g class='logo-svg-beak logo-svg-head' stroke-linejoin='round' fill='hsla(205, 100%, 44%, 1)'>
+        <g class='logo-svg-beak logo-svg-head' stroke-linejoin='round' fill='hsla(198, 75%, 55%, 1)'>
           <polygon points='949,125 965,135 949,142'/>
         </g>
       </g>
@@ -62,7 +62,7 @@
   <!-- <polyline points='835,35 375,150 760,30 375,150 750,235' stroke='red' fill='none' stroke-linejoin='round' id='svg_14'/> -->
 
   <!-- RECTANGLES -->
-  <g class='logo-svg-rects' fill='hsla(205, 100%, 44%, 1)'>
+  <g class='logo-svg-rects' fill='hsla(198, 75%, 55%, 1)'>
     <rect x='538'   y='116'   width='02'  height='02'   class='1'/>
     <rect x='544'   y='097'   width='03'  height='03'   class='2'/>
     <rect x='552'   y='113'   width='03'  height='03'   class='3'/>

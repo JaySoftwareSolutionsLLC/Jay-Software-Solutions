@@ -91,16 +91,6 @@ header div.left-side img, header div.left-side object {
 header div.left-side a {
 	text-decoration: none;
 }
-header div.left-side a:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	position: relative;
-	display: inline-block;
-}
 header div.left-side a h2 {
 	font-family: 'Mr Dafoe', cursive;
 	font-weight: 100;
@@ -511,11 +501,10 @@ footer {
 	color: white;
 	z-index: 500;
 }
-footer img {
+footer object {
+	width: 400px;
 	max-width: 70%;
-	height: auto;
-/*	height: 6rem;*/
-/*	width: auto;*/
+/*	height: auto;*/
 }
 footer h2 {
 	font-family: 'Mr Dafoe', cursive;
