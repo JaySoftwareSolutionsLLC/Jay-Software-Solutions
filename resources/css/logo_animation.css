@@ -20,12 +20,6 @@
 .logo-svg-rects rect, .logo-svg-eye rect {
   transform-origin: center;
 }
-
-@keyframes test {
-	
-}
-/*
 .logo-svg-eye rect {
-  animation: logo-svg-eye-rotate 60s 0s infinite linear;
+/*  animation: logo-svg-eye-rotate 60s 0s infinite linear;*/
 }
-*/

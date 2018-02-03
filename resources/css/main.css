@@ -77,7 +77,7 @@ header div.left-side {
 	max-height: 5rem;
 	cursor: crosshair;
 }
-header div.left-side img, header div.left-side object {
+header div.left-side img, header div.left-side object, header div.left-side svg {
 	margin: 0 0.5rem;
 	height: 5rem;
 	width: auto;
@@ -495,7 +495,7 @@ footer {
 	color: white;
 	z-index: 500;
 }
-footer object {
+footer object, footer svg {
 	width: 400px;
 	max-width: 70%;
 /*	height: auto;*/
