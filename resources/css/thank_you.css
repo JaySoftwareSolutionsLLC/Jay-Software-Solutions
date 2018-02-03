@@ -1,0 +1,30 @@
+/* CSS Document */
+body {
+/*	background: white;*/
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+/*	height: 80vh;*/
+}
+
+header {
+/*	height: 4.75rem;*/
+/*	border-bottom: 0.25rem solid black;*/
+}
+
+div.jumbotron {
+/*	height: inherit;*/
+	background: none;
+	height: 60rem;
+}
+div.jumbotron p {
+	border-top-left-radius: 1rem 15rem;
+	border-top-right-radius: 1rem 15rem;
+	border-bottom-left-radius: 1rem 15rem;
+	border-bottom-right-radius: 1rem 15rem;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+}
