@@ -1,0 +1,43 @@
+/* CSS Document */
+
+body {
+	background: black;
+	color: white;
+}
+
+div.jumbotron {
+/*	height: 40rem;*/
+/*	border-bottom: 0.5rem solid white;*/
+	background: url(../images/software-background.jpg);
+/*	background-size: 100% 100%;*/
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+div.jumbotron h1 {
+	color: white;
+}
+div.jumbotron p {
+/*	background-color: hsla(0, 0%, 100%, 0.60);*/
+/*	color: black;*/
+	border-radius: 3rem 1rem;
+}
+div.jumbotron p:hover {
+/*	background-color: hsla(0, 0%, 100%, 1.0);*/
+}
+
+div.not-available {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: hsla(0,0%,100%,1);
+	color: black;
+	padding: 3rem;
+}
+div.not-available img {
+	width: 20rem;
+	height: 20rem;
+}
+div.not-available h3 {
+	font-size: 2rem;
+	font-weight: 100;
+}

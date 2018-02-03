@@ -1,0 +1,238 @@
+/* CSS Document */
+
+body {
+/*	background: black;*/
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background-color: black;
+}
+
+div.jumbotron {
+	background: url(../images/tech-background.jpg);
+	background-size: cover;
+/*	height: 40rem;*/
+/*	border-bottom: .5rem solid black;*/
+}
+div.jumbotron p {
+	border-radius: 3rem 1rem;
+}
+
+div.features {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+/*	width: 80%;*/
+	margin: 5rem;
+	background-color: white;
+/*	opacity: 0.9;*/
+}
+div.features h2 {
+	font-size: 4rem;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 0;
+	font-family: 'Mr Dafoe', cursive;
+	font-weight: 100;
+}
+div.features p {
+	box-sizing: border-box;
+	width: 50%;
+	max-width: 40rem;
+	text-align: justify;
+	font-size: 1.75rem;
+/*	background-color: hsla(0,0%,0%,0.40);*/
+/*	color: white;*/
+	color: black;
+	padding: 1rem 4rem;
+	margin: 0 0 0 0;
+/*	margin-bottom: 5rem;*/
+}
+div.features p:hover {
+/*	background-color: black;*/
+}
+div.features div.feature {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+/*	border-top: 0.5rem dashed black;*/
+	padding: 3rem;
+}
+div.features div.feature.size {
+	border-top: none;
+}
+div.features div.feature h3 {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 0;
+	font-family: 'Mr Dafoe', cursive;
+	font-weight: 100;
+}
+div.features div.feature p {
+	display: block;
+	background-color: transparent;
+	color: black;
+	width: 100%;
+	max-width: 5000px;
+	text-align: center;
+	margin: 0;
+}
+div.features div.feature div.feature-row {
+	display: inline-flex;
+	justify-content: space-between;
+}
+div.features div.feature div.feature-row div.feature-unit {
+	background: white;
+	background: -moz-linear-gradient(white 0%, white 15rem, hsla(30,74%,53%,1) 100%);
+	background: -webkit-gradient(linear, top, bottom, color-stop(0%,white), color-stop(50%,white), color-stop(100%,hsla(30,74%,53%,1)));
+	background: -webkit-linear-gradient(top, white 0%, white 15rem, hsla(30,74%,53%,1) 100%);
+	background: -o-linear-gradient(top, white 0%, white 15rem, hsla(30,74%,53%,1) 100%);
+	background: -ms-linear-gradient(top, white 0%, white 15rem, hsla(30,74%,53%,1) 100%);
+	background: linear-gradient(white 0%, white 15rem, hsla(30,74%,53%,1) 100%);
+/*	border-radius: 5rem 2rem;*/
+	border: 0.125rem solid black;
+	max-width: 40rem;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	cursor: pointer;
+	opacity: 0.6;
+	margin: 0 0.5rem;
+}
+div.features div.feature div.feature-row div.feature-unit:first-child {
+	border-radius: 3rem 1rem 1rem 3rem;
+}
+div.features div.feature div.feature-row div.feature-unit:first-child img {
+	border-radius: 3rem 1rem 0 0;
+}
+div.features div.feature div.feature-row div.feature-unit:nth-child(2) img {
+	border-radius: 1rem 1rem 0 0;
+}
+div.features div.feature div.feature-row div.feature-unit:nth-child(3) img {
+	border-radius: 1rem 3rem 0 0;
+}
+div.features div.feature div.feature-row div.feature-unit:nth-child(2) {
+	border-radius: 1rem;
+}
+div.features div.feature div.feature-row div.feature-unit:nth-child(3) {
+	border-radius: 1rem 3rem 3rem 1rem;
+}
+div.features div.feature.extras div.feature-row div.feature-unit:first-child,
+div.features div.feature.extras div.feature-row div.feature-unit:nth-child(3) {
+	border-radius: 1rem;
+}
+div.features div.feature div.feature-row div.feature-unit:hover {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	opacity: 1.0;
+}
+div.features div.feature div.feature-row div.feature-unit img {
+	background-color: transparent;
+	border-radius: 4.75rem 4.75rem 0 0;
+	width: 100%;
+	height: 15rem;
+/*	z-index: 5;*/
+}
+div.features div.feature div.feature-row div.feature-unit h4 {
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+	padding: 1rem 0 0;
+}
+div.features div.feature div.feature-row div.feature-unit p {
+/*	width: 80%;*/
+	font-size: 1.75rem;
+	text-align: justify;
+	padding: 1rem 2rem 2rem;
+}
+div.features div.price-estimate {
+	width: 100%;
+	display: none;
+	justify-content: center;
+	padding: 6rem 0;
+/*	border-top: 0.5rem dashed black;*/
+}
+div.features h3 {
+	font-size: 4rem;
+	margin: 0;
+}
+div.features h4 {
+	font-size: 4rem;
+	margin: 0;
+	padding-left: 1rem;
+}
+@media only screen and (max-width: 650px) {
+	div.features {
+		margin: 0;
+	}
+	div.features div.feature div.feature-row div.feature-unit:hover {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	opacity: 0.6;
+	}
+	div.features p {
+		width: 90%;
+		max-width: none;
+	}
+	div.features div.feature div.feature-row {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	div.features div.feature div.feature-row div.feature-unit {
+		width: 80%;
+		margin: 1rem;
+	}
+	div.features div.feature div.feature-row div.feature-unit:nth-child(1),
+	div.features div.feature div.feature-row div.feature-unit:nth-child(2),
+	div.features div.feature div.feature-row div.feature-unit:nth-child(3){
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+		border-bottom-right-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+	:focus {
+   		outline: none !important;
+	}
+}
+@media only screen and (max-width: 750px) {
+	div.features p {
+		font-size: 2rem;
+		width: 75%;
+		max-width: none;
+	}
+	div.features div.feature div.feature-row div.feature-unit p {
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	div.features div.feature {
+/*		width: 35%;*/
+	}
+}
+/*
+@media (pointer:coarse) {
+	div.features div.feature div.feature-row div.feature-unit:active,
+	div.features div.feature div.feature-row div.feature-unit:hover,
+	div.features div.feature div.feature-row div.feature-unit:focus	{
+		filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+		opacity: 0.6;
+	}
+}
+*/
+div.features div.feature div.feature-row div.feature-unit.active {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	opacity: 1.0;
+}
+
+button.contact-us {
+	margin: 3rem 0;
+}
