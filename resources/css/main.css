@@ -52,7 +52,7 @@ body {
 /*	background-color: hsla(195, 80%, 60%, 1);*/
 /*	background-color: #28a7de;*/
 	margin: 5rem 0 0 0;
-	background: url(../images/background-graphic-1.png);
+	background: url(../assets/images/background-graphic-1.png);
 	background-size: contain;
 	background-color: white;
 /*	border: 3px dashed red;*/
@@ -210,7 +210,7 @@ div.drop-down nav ul a li {
 div.jumbotron {
 	height: 50rem;
 	width: 100%;
-	background-image: url('../images/tech-background-2-adjusted.jpg');
+	background-image: url('../assets/images/tech-background-2-adjusted.jpg');
 	background-size: cover;
 /*	background: -webkit-linear-gradient(hsla(198,74%,80%,1.00), hsla(198,74%,53%,1.00));*/
 /*	background: -o-linear-gradient(hsla(198,74%,80%,1.00), hsla(198,74%,53%,1.00));*/

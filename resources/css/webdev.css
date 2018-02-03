@@ -10,7 +10,7 @@ body {
 }
 
 div.jumbotron {
-	background: url(../images/tech-background.jpg);
+	background: url(../assets/images/tech-background.jpg);
 	background-size: cover;
 /*	height: 40rem;*/
 /*	border-bottom: .5rem solid black;*/
