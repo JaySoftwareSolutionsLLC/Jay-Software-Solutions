@@ -76,11 +76,12 @@ header div.left-side {
 	align-items: center;
 	max-height: 5rem;
 	cursor: crosshair;
+/*	text-overflow: clip;*/
 }
-header div.left-side img, header div.left-side object, header div.left-side svg {
+header div.left-side object {
+	height: 100%;
+	width: 100%;
 	margin: 0 0.5rem;
-	height: 5rem;
-	width: auto;
 }
 header div.left-side a {
 	text-decoration: none;
@@ -94,6 +95,10 @@ header div.left-side a h2 {
 	animation: header-text-display 200ms linear forwards;
 	animation-delay: 1s;
 	font-size: 2rem;
+}
+header div.left-side div.logo-container {
+	height: 5rem;
+	width: 16.66rem;
 }
 header div.right-side {
 	margin-right: 1rem;
@@ -495,10 +500,15 @@ footer {
 	color: white;
 	z-index: 500;
 }
-footer object, footer svg {
-	width: 400px;
+footer div.logo-container {
+	height: 15rem;
+	width: 50rem;
 	max-width: 70%;
-/*	height: auto;*/
+	display: inline-block;
+}
+footer object {
+	height: 100%;
+	width: 100%;
 }
 footer h2 {
 	font-family: 'Mr Dafoe', cursive;

@@ -13,22 +13,21 @@ function translateBlock(element, dur, delay) {
     TweenMax.to(element, dur, {
         transformOrigin:    "50% 50%",
         delay:              delay,
-//        repeatDelay:        delay,
+        repeatDelay:        delay,
         x:                  -900,
         repeat:             -1,
-//		yoyo:				false,
-//        ease:               Power0.easeIn
+        ease:               Power1.easeIn
     });
 }
 function flipBlock(element, dur, delay) {
     TweenMax.to(element, dur, {
         transformOrigin:    "50% 50%",
         delay:              delay,
-//        repeatDelay:        delay,
+        repeatDelay:        delay,
         scaleX:             0.1,
         repeat:             -1,
-//        yoyo:               true,
-//        ease:               Power0.easeIn
+        yoyo:               true,
+        ease:               Power0.easeIn
     });
 }
 function animateBlocks(minDur, maxDur, maxDelay, percentTranslated) {
