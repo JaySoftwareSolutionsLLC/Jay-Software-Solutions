@@ -25,6 +25,7 @@ $(document).ready(function() {
 		let jumbotronHeight = jumbotronElement.height();
 		let jumbotronStart = $("header").height();
 		let jumbotronEnd = jumbotronStart + jumbotronHeight;
+		let jumbotronStartX = $('div.jumbotron').position().left;
 		let jumbotronTitleElement = $("div.jumbotron h2");
 		let jumbotronTitleStartX = $(jumbotronTitleElement).offset().left;
 		let jumbotronTitleStartY = $(jumbotronTitleElement).offset().top  - $(document).scrollTop();
@@ -57,11 +58,11 @@ $(document).ready(function() {
 			}
 		}
 		function checkXParameter(x) {
-			if (x < $('div.jumbotron').position().left) {
+			if (x < jumbotronStartX) {
 	//			x = 0;
 				return false;
 			}
-			else if (x > (jumbotronWidth + $('div.jumbotron').position().left - floaterDisplaySize)) {
+			else if (x > (jumbotronWidth + jumbotronStartX - floaterDisplaySize)) {
 	//			x = jumbotronWidth;
 				return false;
 			}
