@@ -1,12 +1,18 @@
 $(document).ready(function() {
 	(function() {
 	"use strict";
-		let fps = 50;
+//		Variables
+		let fps = 30;
 		let maxVx = 20;
 		let maxVy = 20;
 		let numOfOrbs = 4;
 		let minOpacity = 0.4;
 		let maxOpacity = 0.6;
+		
+		
+		let mouseX = 100000000;
+		let mouseY = 100000000;
+		
 		
 //	GOAL: Create a few (3-5) orbs which will explode from the center of the Elegantly Effective h2 element and then move around the jumbotron bouncing off of the walls when they come in contact with them
 
@@ -79,11 +85,36 @@ $(document).ready(function() {
 					let y = parseInt($(floaters[i]).css("top"), 10);
 					x += floaterArray[i].Vx;
 					y += floaterArray[i].Vy;
-					if (checkXParameter(x)) {}
+//					if (i === 0) {
+//						let thisAcceleration = returnAcceleration(x, y);
+//						let Ax = thisAcceleration[0];
+//						let Ay = thisAcceleration[1];
+//						let Vx = floaterArray[i].Vx;
+//						let Vy = floaterArray[i].Vy;
+//						floaterArray[i].Vx -= Ax;
+//						floaterArray[i].Vy -= Ay;
+//						if (Vx >= maxVx) {
+//							floaterArray[i].Vx = maxVx;
+//						}
+//						else if (Vx <= (maxVx * -1)) {
+//							floaterArray[i].Vx = (maxVx * -1);
+//						}
+//						if (Vy >= maxVy) {
+//							floaterArray[i].Vy = maxVy;
+//						}
+//						else if (Vy <= (maxVy * -1)) {
+//							floaterArray[i].Vy = (maxVy * -1);
+//						}					
+//					}
+					if (checkXParameter(x)) {
+//						floaterArray[i].Vx -= Ax;
+					}
 					else {
 						floaterArray[i].Vx *= -1;
 					}
-					if (checkYParameter(y)) {}
+					if (checkYParameter(y)) {
+//						floaterArray[i].Vy -= Ay;
+					}
 					else {
 						floaterArray[i].Vy *= -1;
 					}
@@ -92,12 +123,18 @@ $(document).ready(function() {
 				}
 			}, 1000/floaterFPS);
 		}
-//		 function returnMouseCoordinates() {
-//			 let mouseX = document.pageX;
-//			 console.log(mouseX);
-//			 return event.pageX;
+//		 $( document ).on( "mousemove", function( event ) {
+//			 mouseX = event.pageX;
+//			 mouseY = event.pageY;
+//			 console.log(`mouseX: ${mouseX} | mouseY ${mouseY} | ${returnAcceleration(200,200)}`);
+//		 });
+//		 function returnAcceleration(x, y) {
+//			 let dX = x - mouseX;
+//			 let dY = y - mouseY;
+//			 let aX = 1 / (dX * dX);
+//			 let aY = 1 / (dY * dY);
+//			 return [aX, aY];
 //		 }
-//		 returnMouseCoordinates();
 		generateFloaters(numOfOrbs);
 		createFloaterMovement();
 	}
