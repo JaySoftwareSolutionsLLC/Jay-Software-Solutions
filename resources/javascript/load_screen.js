@@ -1,6 +1,7 @@
-$('html,body').scrollTop(0);
-disableScroll();
-setTimeout(enableScroll, 2000);
+//let keys = {37: 1, 38: 1, 39: 1, 40: 1};
+//$('html,body').scrollTop(0);
+//disableScroll();
+//setTimeout(enableScroll, 2000);
 
 function preventDefault(e) {
   e = e || window.event;
