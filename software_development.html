@@ -22,35 +22,46 @@
 	<!--CSS-->
   	<link rel="stylesheet" href="resources/css/main.css">
   	<link rel="stylesheet" href="resources/css/softdev.css">
+  	<link rel="stylesheet" href="resources/css/load_screen.css">
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Open+Sans+Condensed:300" rel="stylesheet">
 	<!--jQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	
+
+	<div class='loading-screen'>
+	  <div class='logo-container'>
+		<object type="image/svg+xml" data="logo_animation/logo-animation_white_txt.html" class='logo'>
+		  <img src='resources/assets/images/logo_white_text.png'>
+		</object>
+		<h2 style='color: white'>Loading...</h2>
+	  </div>
+	  <div class='loading-section loading-section-left'></div>
+	  <div class='loading-section loading-section-right'></div>
+	</div>
 	<header>
 		<div class="left-side">
-			<div class='logo-container'>
-				<object type="image/svg+xml" data="logo_animation/logo-animation_black_txt.html" class='logo'>
-					<img src='resources/assets/images/cur_logo_black_text.png'>
-				</object>			
+				<div class='logo-container'>
+					<object type="image/svg+xml" data="logo_animation/logo-animation_black_txt.html" class='logo'>
+						<img src='resources/assets/images/cur_logo_black_text.png'>
+					</object>			
+				</div>
 			</div>
-		</div>
-		<div class="right-side">
-			<nav>
-				<ul>
-					<a href="index.html"><li>Home</li></a>
-					<a href="web_development.html"><li>Web Development</li></a>
-					<a href="software_development.html" class="current-page"><li>Software Development</li></a>
-					<a href="contact_us.html"><li>Contact Us</li></a>
-				</ul>
-			</nav>
-		</div>
-		<div class="right-side mobile">
-			<img src="resources/assets/images/menu-icon.png">
-		</div>
-	</header>
+			<div class="right-side">
+				<nav>
+					<ul>
+						<a href="index.html"><li>Home</li></a>
+						<a href="web_development.html"><li>Web Development</li></a>
+						<a href="software_development.html" class="current-page"><li>Software Development</li></a>
+						<a href="contact_us.html"><li>Contact Us</li></a>
+					</ul>
+				</nav>
+			</div>
+			<div class="right-side mobile">
+				<img src="resources/assets/images/menu-icon.png">
+			</div>
+		</header>
 	<div class="drop-down">
 		<nav>
 			<ul>
@@ -85,6 +96,7 @@
 	</footer>
 	
 	<script src="resources/javascript/drop-down-menu.js"></script>
+	<script src='resources/javascript/load_screen.js'></script>
 
 	
 </body>

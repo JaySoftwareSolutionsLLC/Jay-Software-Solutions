@@ -23,12 +23,24 @@
   	<link rel="stylesheet" href="resources/css/reset.css">
   	<link rel="stylesheet" href="resources/css/main.css">
   	<link rel="stylesheet" href="resources/css/logo_animation.css">
+  	<link rel="stylesheet" href="resources/css/load_screen.css">
   	
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Dosis|Open+Sans+Condensed:300" rel="stylesheet">
 </head>
 <body>
 
+ 	<div class='loading-screen'>
+ 		<div class='logo-container'>
+			<object type="image/svg+xml" data="logo_animation/logo-animation_white_txt.html" class='logo'>
+				<img src='resources/assets/images/logo_white_text.png'>
+			</object>
+			<h2 style='color: white'>Loading...</h2>
+		</div>
+ 		<div class='loading-section loading-section-left'></div>
+ 		<div class='loading-section loading-section-right'></div>
+ 	</div>
+ 	
   	<header>
 		<div class="left-side">
 		<div class='logo-container'>
@@ -51,6 +63,7 @@
 			<img src="resources/assets/images/menu-icon.png">
 		</div>
 	</header>
+	
 	<div class="drop-down">
 		<nav>
 			<ul>
@@ -113,5 +126,6 @@
 	<script src="resources/javascript/moving_orbs.js"></script>
 <!--	<script src="resources/javascript/main.js"></script>-->
 	<script src="resources/javascript/drop-down-menu.js"></script>
+	<script src='resources/javascript/load_screen.js'></script>
 </body>
 </html>

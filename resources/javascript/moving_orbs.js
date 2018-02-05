@@ -8,6 +8,7 @@ $(document).ready(function() {
 		let numOfOrbs = 4;
 		let minOpacity = 0.4;
 		let maxOpacity = 0.6;
+		let explosionDelay = 1.5;
 		
 		
 		let mouseX = 100000000;
@@ -138,6 +139,6 @@ $(document).ready(function() {
 		generateFloaters(numOfOrbs);
 		createFloaterMovement();
 	}
-	setTimeout(floaterFunctionality, 500);
+	setTimeout(floaterFunctionality, (explosionDelay*1000));
 	})();
 });
