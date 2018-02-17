@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+	<!--Basic Meta Setup-->
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Description which is sometimes used by search engines-->
+ 	<meta name="description" content="We look forward to hearing from you. Send us your message and we’ll email or call you back as soon as possible.">
+ 	<!-- Verify ownership for Google Search Console -->
+	<meta name="google-site-verification" content="mAkfB-I3kDfmPd_lfYHYZNg-xhiVv9c0FOVC8CArfgg" />
+	<!-- Control the behavior of search engine crawling and indexing -->
+	<meta name="robots" content="index,follow"><!-- All Search Engines -->
+	<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+	<!-- Tells Google not to show the sitelinks search box -->
+	<meta name="google" content="nositelinkssearchbox">
+	<!--Favicon-->
+	<link rel="shortcut icon" href="resources/assets/images/favicon.ico" type="image/x-icon"/>
+<!--	<link href="resources/assets/images/favicon.ico" rel="icon" type="image/x-icon"/>-->
+	<!--Title-->
+  	<title>Contact</title>
+	<!--CSS-->
+  	<link rel="stylesheet" href="resources/css/reset.css">
+  	<link rel="stylesheet" href="resources/css/main.css">
+	<link rel="stylesheet" href="resources/css/contact.css">
+	<link rel='stylesheet' href='resources/css/load_screen.css'>
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Open+Sans+Condensed:300" rel="stylesheet">
+</head>
+	<body>
+
+		<div class='loading-screen'>
+			<div class='logo-container'>
+				<object type="image/svg+xml" data="logo_animation/logo-animation_white_txt.html" class='logo'>
+					<img src='resources/assets/images/logo_white_text.png' alt='Jay Software Solutions logo'>
+				</object>
+				<div class="breaking-line"></div>
+				<h2 style='color: white'>Loading...</h2>
+			</div>
+			<div class='loading-section loading-section-left'></div>
+			<div class='loading-section loading-section-right'></div>
+		</div>
+
+		<header>
+			<div class='left'>
+				<object type="image/svg+xml" data="logo_animation/logo-animation_white_txt.html" class='logo'>
+					<img src='resources/assets/images/logo_black_text.png' alt='Jay Software Solutions logo'>
+				</object>
+			</div>
+			<nav class='right'>
+				<a href='index.html'>Home</a>
+				<a href='services.html'>Services</a>
+				<!-- <a href='contest.html'>Sweepstakes</a> -->
+				<a class='active' href='contact.html'>Contact</a>
+			</nav>
+			<nav class="right mobile">
+				<img src="resources/assets/images/icon-menu.png" alt='menu icon'>
+			</nav>
+		</header>
+		<div class="drop-down">
+			<nav>
+				<a href='index.html'>Home</a>
+				<a href='services.html'>Services</a>
+				<!-- <a href='contest.html'>Sweepstakes</a> -->
+				<a class='active' href='contact.html'>Contact</a>
+			</nav>
+		</div>
+
+		<h1>Contact Us</h1>
+		<p>We look forward to hearing from you. Send us your message and we’ll email or call you back as soon as possible.</p>
+
+        <section>
+    		<form id="form1" name="form1" method="post" action="contact.php" onsubmit="return validateForm()">
+                <label for='name'>Name</label>
+                <input type='text' name='name' id='name' placeholder="John Smith" required>
+                <label for='email'>Email</label>
+                <input type='text' name='email' id='email' placeholder="jsmith@gmail.com" required>
+                <label for='phone'>Phone (optional)</label>
+                <input type='text' name='phone' id='phone' placeholder="(444) 867-5309" maxlength="14">
+                <label for='org'>Organization (optional)</label>
+                <input type='text' name='org' id='org' placeholder="Smith Construction Supplies Inc.">
+                <label for='msg'>Message</label>
+                <textarea name="msg" id="msg" placeholder="Hey Jay Software Solutions, I am looking for a quote on..." required></textarea>
+                <label for='pMthd'>Preferred method of contact (optional)</label>
+                <select name='pMthd' id='pMthd'>
+                   	<option value='none'>No Preference</option>
+                    <option value='email'>Email</option>
+                    <option value='phone'>Phone</option>
+                </select>
+                <label for='pTime'>Best time to contact (optional)</label>
+                <input type='time' name='pTime' id='pTime'>
+                <input type="submit" name="feedbackForm" value="Submit" id="submit">
+    		</form>
+    	</section>
+
+		<footer>
+			<div class='logo-container'>
+				<object type="image/svg+xml" data="logo_animation/logo-animation_black_txt.html" class="logo" alt="Jay Software Solutions Logo">
+					<img src="resources/assets/images/logo_white_text.png" alt="Jay Software Solutions Logo">
+				</object>
+			</div>
+			<div class='social-media'>
+				<a href='https://twitter.com/JaySoftwareLLC'><i class="fab fa-twitter"></i></a>
+				<a href='https://www.facebook.com/jaysoftwaresolutions/'><i class="fab fa-facebook-f"></i></a>
+				<a href='http://instagram.com/jaysoftwaresolutions'><i class="fab fa-instagram"></i></a>
+			</div>
+			<h4>Jay Software Solutions L.L.C.</h4>
+			<h4>East Aurora, NY</h4>
+			<h4>contact@jaysoftwaresolutions.com</h4>
+			<h4><a href='contact.html'>Contact Us</a></h4>
+		</footer>
+
+		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
+		<script src="resources/javascript/main.js"></script>
+		<script src='resources/javascript/drop-down.js'></script>
+		<script src='resources/javascript/load_screen.js'></script>
+        <script src='resources/javascript/contact.js'></script>
+	</body>
+</html>

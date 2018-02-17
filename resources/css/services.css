@@ -1,0 +1,81 @@
+body {
+    background: hsla(205, 100%, 45%, 1);
+    color: white;
+}
+
+h1 {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 6rem;
+    margin: 3rem 0;
+}
+p.intro {
+    width: 80%;
+    max-width: 400px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 5rem 0;
+    padding: 2rem;
+    border: 0.25rem solid white;
+/*	background: white;*/
+/*	color: hsla(205, 100%, 44%, 1);*/
+}
+
+section.services .container {
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.services .container .serv {
+    box-sizing: border-box;
+    width: 20%;
+    min-width: 175px;
+    margin: 0 5rem 2rem 5rem;
+}
+section.services .container .serv img {
+    width: 100%;
+    height: auto;
+}
+section.services .container .serv h3 {
+    font-size: 2rem;
+}
+section.services .container .serv p {
+    font-size: 1.25rem;
+}
+@media only screen and (max-width: 1050px) {
+    section.services .container .serv {
+        margin: 0 2.5rem 2rem 2.5rem;
+    }
+}
+@media only screen and (max-width: 855px) {
+    section.services .container .serv {
+        margin: 0 0.75rem 2rem 0.75rem;
+    }
+}
+@media only screen and (max-width: 725px) {
+    section.services .container {
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 550px) {
+    section.services .container .serv {
+        width: 80%;
+    }
+}
+
+button {
+    box-sizing: border-box;
+    color: white;
+    padding: 1rem;
+    margin: 0 0 5rem 0;
+    border-radius: 5rem;
+    border: 0.25rem solid white;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+button:hover {
+    color: hsla(205, 100%, 45%, 1);
+    background-color: white;
+}

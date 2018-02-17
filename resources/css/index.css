@@ -1,0 +1,258 @@
+section.jumbotron {
+	/*background: hsla(205, 100%, 0%, 1);*/
+	background: url(../assets/images/background-jumbotron.jpg);
+	background-size: cover;
+	font-size: 12px;
+	height: 40em;
+	justify-content: space-between;
+	color: white;
+}
+.jumbotron .top {
+	min-width: 49.15%;
+}
+.jumbotron h1 {
+	width: 100%;
+	font-size: 5.75em;
+	font-family: 'Mr Dafoe', cursive;
+}
+.jumbotron h2 {
+	width: 100%;
+	text-align: right;
+	font-size: 2em;
+	font-family: 'Mr Dafoe', cursive;
+}
+.jumbotron p {
+    width: 80%;
+    max-width: 450px;
+	background: black;
+	color: white;
+	padding: 1.5em;
+	text-align: justify;
+	border-top-left-radius: 5em 1em;
+	border-top-right-radius: 5em 1em;
+	border-bottom-left-radius: 5em 1em;
+	border-bottom-right-radius: 5em 1em;
+	border: 3px solid white;
+}
+@media only screen and (max-width: 1285px) {
+    .jumbotron h1 {
+    	font-size: 5em;
+    }
+    .jumbotron h2 {
+    	font-size: 1.75em;
+    }
+    section.jumbotron {
+        height: 35em;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .jumbotron h1 {
+    	font-size: 3em;
+    }
+    .jumbotron h2 {
+    	font-size: 1.25em;
+    }
+}
+@media only screen and (max-width: 500px) {
+    section.jumbotron p {
+        padding: 1.25em;
+        font-size: 1.25em;
+        width: 95%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .jumbotron h1 {
+    	font-size: 2.5em;
+    }
+    .jumbotron h2 {
+    	text-align: center;
+    }
+}
+
+section.differentiators {
+	background: hsla(205, 100%, 15%, 1);
+}
+section.differentiators .container {
+	box-sizing: border-box;
+	width: 86.44%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 5em 9.8% 0 9.8%;
+	font-size: 12px;
+}
+section.differentiators div.diff {
+	width: 23.08%;
+	margin-right: 2em;
+}
+section.differentiators div.diff:nth-child(3n) {
+	margin-right: 0;
+}
+section.differentiators h3 {
+	font-size: 2em;
+	margin: 0 0 0.5em 0;
+}
+section.differentiators div.diff p {
+	font-size: 1.25em;
+	line-height: 1.3;
+	width: 100%;
+	text-align: justify;
+	margin: 0 0 2rem 0;
+}
+section.differentiators img {
+	width: 100%;
+	height: auto;
+}
+@media only screen and (max-width: 1050px) {
+    section.differentiators .container {
+        width: 100%;
+        padding: 0%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    section.differentiators p {
+        width: 80%;
+    }
+    section.differentiators .container {
+        width: 100%;
+    }
+    section.differentiators div.diff {
+    	width: 30%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    section.differentiators .container {
+        flex-flow: column;
+        align-items: center;
+    }
+    section.differentiators div.diff {
+    	width: 85%;
+        margin: 0;
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 505px) {
+    section.differentiators p {
+        width: 100%;
+        font-size: 1.25em;
+    }
+}
+
+section.mission {
+	background: hsla(205, 100%, 30%, 1);
+}
+section.mission .quote {
+	height: 8em;
+	width: 66.10%;
+    min-width: 500px;
+	display: inline-flex;
+	justify-content: space-between;
+}
+section.mission .quote img {
+	height: 4em;
+}
+section.mission .quote .end {
+	align-self: flex-end;
+}
+section.mission .quote p {
+	width: 100%;
+	align-self: center;
+}
+@media only screen and (max-width: 600px) {
+    section.mission .quote {
+    	height: 6em;
+        width: 100%;
+        min-width: 300px;
+    }
+    section.mission .quote img {
+    	height: 2em;
+    }
+    section.mission .quote .end {
+    }
+    section.mission .quote p {
+        font-size: 1.25em;
+    }
+}
+@media only screen and (max-width: 400px) {
+    section.mission .quote {
+    	height: 7em;
+        width: 100%;
+        min-width: 250px;
+        margin-top: 2em;
+    }
+    section.mission .quote img {
+    	height: 1.5em;
+    }
+}
+
+section.services {
+	background: hsla(205, 100%, 45%, 1);
+}
+section.services .container {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	padding: 5em 0 0 0;
+}
+section.services .container a {
+	text-decoration: none;
+}
+section.services .container .serv {
+	box-sizing: border-box;
+	height: 20em;
+	width: 20em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+}
+section.services .container .serv h3 {
+	width: 100%;
+	height: 100%;
+	font-size: 2em;
+	opacity: 0;
+	color: white;
+	background-color: hsla(205, 100%, 45%, 0.8);
+	/*transition: all 300ms ease;*/
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+section.services .container .serv h3:hover {
+	opacity: 1;
+}
+section.services .creation {
+	background: url('../assets/images/graphic-gears.png');
+}
+section.services .enhancement {
+	background: url('../assets/images/graphic-tools.png');
+}
+section.services .software {
+	background: url('../assets/images/graphic-molecule.png');
+}
+@media only screen and (max-width: 875px) {
+    section.services .container .serv {
+    	height: 12em;
+        width: 12em;
+    }
+}
+@media only screen and (max-width: 750px) {
+    section.services p {
+    	font-size: 1.25em;
+    }
+}
+@media only screen and (max-width: 575px) {
+    section.services .container {
+    	flex-flow: column;
+    }
+    section.services .container .serv {
+    	height: 20em;
+        width: 20em;
+    }
+}
+@media only screen and (max-width: 400px) {
+    section.services .container .serv {
+    	height: 10em;
+        width: 10em;
+    }
+}
