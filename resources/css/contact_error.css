@@ -1,0 +1,47 @@
+body {
+    background: black;
+    height: 100vh;
+}
+h1 {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 6rem;
+    margin: 3rem 0;
+    color: white;
+}
+p {
+    width: 80%;
+    max-width: 400px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 1rem 15rem;
+	border-top-right-radius: 1rem 15rem;
+	border-bottom-left-radius: 1rem 15rem;
+	border-bottom-right-radius: 1rem 15rem;
+    padding: 2rem;
+    margin: 5rem 0;
+    border: 0.25rem solid white;
+}
+button {
+    box-sizing: border-box;
+    color: white;
+    padding: 1rem;
+/*    margin: 0 0 5rem 0;*/
+    border-top-left-radius: 1rem 5rem;
+    border-top-right-radius: 1rem 5rem;
+    border-bottom-left-radius: 1rem 5rem;
+    border-bottom-right-radius: 1rem 5rem;
+    border: 0.25rem solid white;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+button:hover {
+    color: hsla(205, 100%, 0%, 1);
+    background-color: white;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}

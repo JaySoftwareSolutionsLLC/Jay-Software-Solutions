@@ -1,5 +1,6 @@
 * {
 	transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	outline: none;
 }
 html {
 	width: 100%;
@@ -67,6 +68,7 @@ div.drop-down {
 	box-sizing: border-box;
 	border-left: 0.25rem solid white;
 	border-bottom: 0.25rem solid white;
+	border-top: 0.25rem solid white;
 }
 div.drop-down nav {
 	display: inline-flex;
@@ -136,8 +138,8 @@ footer {
 	align-items: center;
 }
 footer object, footer img {
-	width: 300px;
-	height: 90px;
+	width: 400px;
+	height: 120px;
 }
 footer .social-media {
 	display: inline-flex;
@@ -156,15 +158,15 @@ footer h4 {
 footer a {
 	color: black;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
+	footer object, footer img {
+		width: 300px;
+		height: 90px;
+	}
+}
+@media only screen and (max-width: 350px) {
 	footer object, footer img {
 		width: 250px;
 		height: 75px;
-	}
-}
-@media only screen and (max-width: 300px) {
-	footer object, footer img {
-		width: 200px;
-		height: 60px;
 	}
 }

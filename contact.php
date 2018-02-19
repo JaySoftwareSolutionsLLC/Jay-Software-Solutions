@@ -13,7 +13,7 @@
     $pTime = $_POST['pTime'];
 //Validate first
 	if(empty($name)||empty($visitor_email)||empty($message)) {
-		echo "<h2>Name, email and message all need to be filled out in order to submit this form.</h2>";
+		header( 'Location: contact_error.html' ) ;
 		exit;
 	}
 	$email_from = $visitor_email; //<== Put your email address here

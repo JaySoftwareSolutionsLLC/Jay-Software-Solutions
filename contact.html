@@ -7,8 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--Description which is sometimes used by search engines-->
  	<meta name="description" content="We look forward to hearing from you. Send us your message and we’ll email or call you back as soon as possible.">
- 	<!-- Verify ownership for Google Search Console -->
-	<meta name="google-site-verification" content="mAkfB-I3kDfmPd_lfYHYZNg-xhiVv9c0FOVC8CArfgg" />
 	<!-- Control the behavior of search engine crawling and indexing -->
 	<meta name="robots" content="index,follow"><!-- All Search Engines -->
 	<meta name="googlebot" content="index,follow"><!-- Google Specific -->
@@ -25,6 +23,8 @@
 	<link rel="stylesheet" href="resources/css/contact.css">
 	<link rel='stylesheet' href='resources/css/load_screen.css'>
 	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!--	reCAPTCHA-->
+<!--	<script src='https://www.google.com/recaptcha/api.js'></script>-->
 
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Open+Sans+Condensed:300" rel="stylesheet">
@@ -42,6 +42,13 @@
 			<div class='loading-section loading-section-left'></div>
 			<div class='loading-section loading-section-right'></div>
 		</div>
+		
+		<section class='modal'>
+			<h4>Oops! It looks like your submission has the following errors:</h2>
+			<ul>
+			</ul>
+			<button>Got it!</button>
+		</section>
 
 		<header>
 			<div class='left'>
@@ -72,17 +79,17 @@
 		<p>We look forward to hearing from you. Send us your message and we’ll email or call you back as soon as possible.</p>
 
         <section>
-    		<form id="form1" name="form1" method="post" action="contact.php" onsubmit="return validateForm()">
+    		<form id="form1" name="form1" method="post" action="contact.php">
                 <label for='name'>Name</label>
-                <input type='text' name='name' id='name' placeholder="John Smith" required>
+                <input type='text' name='name' id='name' placeholder="John Smith">
                 <label for='email'>Email</label>
-                <input type='text' name='email' id='email' placeholder="jsmith@gmail.com" required>
+                <input type='text' name='email' id='email' placeholder="jsmith@gmail.com">
                 <label for='phone'>Phone (optional)</label>
                 <input type='text' name='phone' id='phone' placeholder="(444) 867-5309" maxlength="14">
                 <label for='org'>Organization (optional)</label>
                 <input type='text' name='org' id='org' placeholder="Smith Construction Supplies Inc.">
                 <label for='msg'>Message</label>
-                <textarea name="msg" id="msg" placeholder="Hey Jay Software Solutions, I am looking for a quote on..." required></textarea>
+                <textarea name="msg" id="msg" placeholder="Hey Jay Software Solutions, I am looking for a quote on..."></textarea>
                 <label for='pMthd'>Preferred method of contact (optional)</label>
                 <select name='pMthd' id='pMthd'>
                    	<option value='none'>No Preference</option>
@@ -102,14 +109,13 @@
 				</object>
 			</div>
 			<div class='social-media'>
-				<a href='https://twitter.com/JaySoftwareLLC'><i class="fab fa-twitter"></i></a>
-				<a href='https://www.facebook.com/jaysoftwaresolutions/'><i class="fab fa-facebook-f"></i></a>
-				<a href='http://instagram.com/jaysoftwaresolutions'><i class="fab fa-instagram"></i></a>
+				<a href='https://twitter.com/JaySoftwareLLC' target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href='https://www.facebook.com/jaysoftwaresolutions/' target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href='http://instagram.com/jaysoftwaresolutions' target="_blank"><i class="fab fa-instagram"></i></a>
 			</div>
 			<h4>Jay Software Solutions L.L.C.</h4>
 			<h4>East Aurora, NY</h4>
 			<h4>contact@jaysoftwaresolutions.com</h4>
-			<h4><a href='contact.html'>Contact Us</a></h4>
 		</footer>
 
 		<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>

@@ -70,9 +70,6 @@ section textarea {
     height: 12rem;
     resize: none;
 }
-input:focus, select:focus, textarea:focus {
-    /*outline: 0.5rem solid hsla(205, 100%, 44%, 1);*/
-}
 section #submit {
     margin: 2rem 0 0 0;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -93,4 +90,51 @@ section #submit:hover {
     section label, section input, section select, section textarea {
         font-size: 1.25rem;
     }
+}
+
+section.modal {
+	position: fixed;
+	top: 15vh;
+	left: 20vw;
+	width: 60vw;
+	min-height: 20vh;
+	background: hsla(0, 100%, 100%, 0.95);
+	max-width: none;
+	color: black;
+	padding: 2rem;
+	display: inline-flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-around;
+	opacity: 0;
+	z-index: -100;
+/*	display: none;*/
+}
+section.modal h4 {
+	width: 80%;
+	font-size: 2rem;
+	border: none;
+	padding: none;
+}
+section.modal li {
+	font-size: 2rem;
+	list-style: circle;
+}
+section.modal button {
+    box-sizing: border-box;
+    color: black;
+    padding: 1rem;
+/*    margin: 0 0 5rem 0;*/
+    border-top-left-radius: 1rem 5rem;
+    border-top-right-radius: 1rem 5rem;
+    border-bottom-left-radius: 1rem 5rem;
+    border-bottom-right-radius: 1rem 5rem;
+    border: 0.25rem solid black;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+section.modal button:hover {
+    color: hsla(205, 100%, 100%, 1);
+    background-color: black;
 }
