@@ -1,0 +1,136 @@
+.main-content {
+	box-sizing: border-box;
+	width: 100%;
+	border: 5rem solid hsla(205, 100%, 44%, 1);
+	background: black;
+	color: white;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5rem;
+}
+
+.main-content h1 {
+	font-size: 8rem;
+	font-family: 'Mr Dafoe', cursive;
+	padding-bottom: 2rem;
+}
+.main-content h2 {
+	font-size: 3rem;
+	font-family: 'Mr Dafoe', cursive;
+}
+
+.main-content .chunk {
+	width: 100%;
+	padding: 1.5rem 0;
+	display: inline-flex;
+	flex-flow: column nowrap;
+}
+.main-content .chunk h3, .main-content .chunk p, .main-content .chunk textarea {
+	width: 100%;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.main-content .chunk h3 {
+	font-size: 4rem;
+	padding: 0.5rem 0;
+}
+.main-content .chunk p {
+	font-size: 1.5rem;
+	max-width: none;
+}
+.main-content .chunk textarea {
+	box-sizing: border-box;
+	height: 15rem;
+	font-size: 1.5rem;
+	border: none;
+	padding: 0.5rem;
+	resize: none;
+}
+.main-content .chunk .container {
+	width: 100%;
+	display: inline-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.main-content .chunk .container .font, .main-content .chunk .container .color {
+	width: 8rem;
+}
+.main-content .chunk .container.colors {
+	justify-content: center;
+}
+.main-content .chunk .container h3 {
+	box-sizing: border-box;
+	width: 100%;
+	height: 8rem;
+	font-size: 2rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.25rem solid hsla(205, 100%, 44%, 1);
+	padding: 0;
+	border-radius: 1rem;
+}
+.main-content .chunk .container h4 {
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	width: 100%;
+	flex-grow: 15;
+	font-size: 1.25rem;
+	text-decoration: underline;
+	margin-bottom: 1rem;
+}
+.main-content .chunk .container p {
+	width: 100%;
+	font-size: 1.25rem;
+}
+.main-content .chunk .container p.audience {
+	font-size: 0.8333rem;
+}
+.main-content .chunk .container .color h3 {
+	border: none;
+	color: black;
+	border-radius: 5rem;
+}
+.main-content .chunk.colors input {
+	width: 5rem;
+	height: 5rem;
+	background-color: black;
+	border-color: black;
+}
+.main-content .chunk.colors button {
+	background: none;
+	color: white;
+	border: 0.25rem solid white;
+	border-radius: 5rem;
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	cursor: pointer;
+}
+.main-content .information {
+	font-size: 1.5rem;
+}
+.main-content .information label {
+	width: 100%;
+	text-align: left;
+}
+.main-content .information input {
+	width: 100%;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+}
+.main-content .information #submit {
+	border: 0.25rem solid hsl(205, 100%, 44%);
+	background: none;
+	color: hsl(205, 100%, 44%);
+	font-family: 'Open Sans Condensed', sans-serif;
+	border-radius: 2rem;
+	padding: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+}
+.main-content .information #submit:hover {
+	background: hsl(205, 100%, 44%);
+	color: white;
+}
