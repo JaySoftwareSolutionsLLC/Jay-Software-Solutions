@@ -1,6 +1,8 @@
 * {
 	transition: all 450ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
 	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
 	width: 100%;
@@ -153,7 +155,7 @@ footer .social-media i {
 }
 footer h4 {
 	font-size: 1.25em;
-	margin-bottom: 0.75em;
+	margin-bottom: 0.5em;
 }
 footer a {
 	color: black;

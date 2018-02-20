@@ -256,3 +256,8 @@ section.services .software {
         width: 10em;
     }
 }
+@media (hover: none) {
+	section.services .container .serv h3 {
+		opacity: 0.75;
+	}
+}

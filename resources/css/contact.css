@@ -80,6 +80,7 @@ section #submit {
     color: white;
     padding: 1rem;
     cursor: pointer;
+	width: 80%;
 }
 section #submit:hover {
     background: hsla(205, 100%, 44%, 1);
