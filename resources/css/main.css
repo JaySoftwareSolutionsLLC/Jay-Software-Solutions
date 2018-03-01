@@ -132,7 +132,8 @@ section p {
 }
 
 footer {
-	background: white;
+/*	background: white;*/
+	background: linear-gradient(160deg, hsla(205, 100%, 0%, 0.15), hsla(205, 100%, 100%, 1), hsla(205, 100%, 0%, 0.15)) white;
 	color: black;
 	width: 100%;
 	display: inline-flex;
@@ -152,6 +153,25 @@ footer .social-media {
 footer .social-media i {
 	font-size: 2em;
 	margin-bottom: 0.75em;
+	transition: 250ms 50ms;
+}
+footer .fa-twitter:hover {
+	color: hsl(202, 89%, 63%);
+}
+footer .fa-facebook-f {
+		padding: 0 6px;
+}
+footer .fa-facebook-f:hover {
+	color: hsl(223, 39%, 46%);
+}
+footer .fa-instagram {
+	transition: all 0ms 0ms;
+	padding: 0 0.0875rem 0 0.125rem;
+	border-radius: 0.5rem;
+}
+footer .fa-instagram:hover {
+	color: white;
+	background: black;
 }
 footer h4 {
 	font-size: 1.25em;

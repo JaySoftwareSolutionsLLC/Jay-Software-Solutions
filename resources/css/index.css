@@ -70,7 +70,10 @@ section.jumbotron {
 }
 
 section.differentiators {
-	background: hsla(205, 100%, 15%, 1);
+/*	background: hsla(205, 100%, 15%, 1);*/
+	background: -webkit-linear-gradient(hsla(205, 100%, 10%, 0.80), hsla(205, 100%, 20%, 0.90)), -webkit-linear-gradient(left, #000, #fff, #fff, #000);
+	background: -o-linear-gradient(hsla(205, 100%, 10%, 0.80), hsla(205, 100%, 20%, 0.90)), -o-linear-gradient(left, #000, #fff, #fff, #000);
+	background: linear-gradient(hsla(205, 100%, 10%, 0.80), hsla(205, 100%, 20%, 0.90)), linear-gradient(to right, #000, #fff, #fff, #000);
 }
 section.differentiators .container {
 	box-sizing: border-box;

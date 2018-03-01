@@ -1,5 +1,8 @@
 body {
-    background: hsla(205, 100%, 45%, 1);
+	background: -webkit-radial-gradient(hsla(205, 100%, 45%, 1), hsla(205, 100%, 35%, 1));
+	background: -o-radial-gradient(hsla(205, 100%, 45%, 1), hsla(205, 100%, 35%, 1));
+	background: -moz-radial-gradient(hsla(205, 100%, 45%, 1), hsla(205, 100%, 35%, 1));
+    background: radial-gradient(hsla(205, 100%, 45%, 1), hsla(205, 100%, 35%, 1));
     color: white;
 }
 
