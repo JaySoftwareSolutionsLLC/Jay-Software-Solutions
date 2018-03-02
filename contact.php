@@ -2,7 +2,7 @@
 	if(!isset($_POST['feedbackForm'])) {
     //This page should not be accessed directly. Need to submit the form.
 //    echo "error; you need to submit the form!";
-		header('location: contact_us.html');
+		header('location: contact.html');
 	}
 	$name = $_POST['name'];
 	$visitor_email = $_POST['email'];

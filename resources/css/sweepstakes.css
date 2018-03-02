@@ -131,9 +131,10 @@ div.services-budget div.all-options, div.services-budget div.all-budgets {
 div.services-budget div.all-options div.option {
 	display: inline-flex;
 	justify-content: flex-start;
+	align-items: center;
 	width: 33%;
 	font-size: 1.5rem;
-	padding: 0.5rem 0;
+	padding: 0.5rem;
 }
 @media only screen and (max-width: 475px) {
 	div.services-budget div.all-options div.option {

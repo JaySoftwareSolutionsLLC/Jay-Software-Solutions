@@ -51,7 +51,7 @@
 			<nav class='right'>
 				<a href='index.html'>Home</a>
 				<a href='services.html'>Services</a>
-				<!-- <a href='contest.html'>Sweepstakes</a> -->
+				<a class='active' href='sweepstakes.html'>Sweepstakes</a> 
 				<a href='contact.html'>Contact</a>
 			</nav>
 			<nav class="right mobile">
@@ -62,16 +62,15 @@
 			<nav>
 				<a href='index.html'>Home</a>
 				<a href='services.html'>Services</a>
-				<!-- <a href='contest.html'>Sweepstakes</a> -->
+				 <a href='sweepstakes.html'>Sweepstakes</a> 
 				<a href='contact.html'>Contact</a>
 			</nav>
 		</div>
 		
-		<form class='questionnaire'>
+		<form class='questionnaire' id="questionnaire" name="questionnaire" method="post" action="submit_questionnaire.php">
 			<h1>Opening Sweepstakes</h1>
 			<div class='instructional'>
 			<h2 class='countdown'><span class="countdown"></span> until the Sweepstakes <span class='direction'></span></h2>
-<!--			<p class='instructions'>If you haven't already, please take a look around the Jay Software Solutions website and make a mental note of the services we offer as well as what you like and dislike.<span class='page-links'><a href='index.html'>Home</a><a href='services.html'>Services</a></span></p>-->
 			<p class='disclaimer'>By hitting the 'begin' button, I confirm that I have read and agree to the <a href='official_rules.html'>official rules</a>.</p>
 			<button type="button" class='begin'>Begin</button>
 			</div>
@@ -104,39 +103,39 @@
 					<p>Please select all of our services that you (or your company) would be interested in if they fit your budget.</p>
 					<div class='all-options'>
 						<div class='option'>
-							<input type="checkbox" id="landing-page" value="Landing Page" name="services">
+							<input type="checkbox" id="landing-page" value="landing-page" name="services[]">
 							<label for="landing-page">Landing Page</label>						
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="small-website" value="Small Website" name="services">
+							<input type="checkbox" id="small-website" value="small-website" name="services[]">
 							<label for="small-website">Small Website</label>
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="web-application" value="Web Application" name="services">
+							<input type="checkbox" id="web-application" value="web-application" name="services[]">
 							<label for="web-application">Web Application</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="e-commerce" value="eCommerce" name="services">
+							<input type="checkbox" id="e-commerce" value="e-commerce" name="services[]">
 							<label for="e-commerce">eCommerce</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="online-ordering" value="Online Ordering" name="services">
+							<input type="checkbox" id="online-ordering" value="online-ordering" name="services[]">
 							<label for="online-ordering">Online Ordering</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="responsive-design" value="Responsive Design" name="services">
+							<input type="checkbox" id="responsive-design" value="responsive-design" name="services[]">
 							<label for="responsive-design">Responsive Design</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="seo" value="SEO" name="services">
+							<input type="checkbox" id="seo" value="seo" name="services[]">
 							<label for="seo" id='seo-label'>Search Engine Optimization</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="logo-animation" value="Logo Animation" name="services">
+							<input type="checkbox" id="logo-animation" value="logo-animation" name="services[]">
 							<label for="logo-animation">Logo Animation</label>					
 						</div>
 						<div class='option'>
-							<input type="checkbox" id="custom-software" value="Custom Software" name="services">
+							<input type="checkbox" id="custom-software" value="custom-software" name="services[]">
 							<label for="custom-software">Custom Software</label>				
 						</div>
 					</div>
@@ -144,39 +143,39 @@
   					<div class='all-budgets'>
   						<div class='budget'>
   	  						<label for="landing-page-budget">Landing Page Budget</label>
-  							<input type="number" id='landing-page-budget' name='landing-page-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='landing-page-budget' name='landing-page-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="small-website-budget">Small Website Budget</label>
-  							<input type="number" id='small-website-budget' name='small-website-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='small-website-budget' name='small-website-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="web-application-budget">Web Application Budget</label>
-  							<input type="number" id='web-application-budget' name='web-application-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='web-application-budget' name='web-application-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="e-commerce-budget">eCommerce Budget</label>
-  							<input type="number" id='e-commerce-budget' name='e-commerce-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='e-commerce-budget' name='e-commerce-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="online-ordering-budget">Online Ordering Budget</label>
-  							<input type="number" id='online-ordering-budget' name='online-ordering-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='online-ordering-budget' name='online-ordering-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="responsive-design-budget">Responsive Design Budget</label>
-  							<input type="number" id='responsive-design-budget' name='responsive-design-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='responsive-design-budget' name='responsive-design-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="seo-budget" id='seo-budget-label'>Search Engine Optimization Budget</label>
-  							<input type="number" id='seo-budget' name='seo-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='seo-budget' name='seo-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="logo-animation-budget">Logo Animation Budget</label>
-  							<input type="number" id='logo-animation-budget' name='logo-animation-budget' min='0' max='10000' step='25'>
+  							<input type="number" id='logo-animation-budget' name='logo-animation-budget' min='0' max='10000' >
   						</div>
   						<div class='budget'>
   	  						<label for="custom-software-budget">Custom Software Budget</label>
-  							<input type="number" id='custom-software-budget' name='custom-software-budget' min='0' max='25000' step='25'>
+  							<input type="number" id='custom-software-budget' name='custom-software-budget' min='0' max='25000' >
   						</div>
   					</div>
 					<button type='button' class='next'>Next</button>
@@ -201,32 +200,32 @@
 							<label for="llh-4">4</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-5' name="service-likelihood">
+							<input type="radio" value="Five" id='llh-5' name="service-likelihood">
 							<label for="llh-5">5</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-6' name="service-likelihood">
+							<input type="radio" value="Six" id='llh-6' name="service-likelihood">
 							<label for="llh-6">6</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-7' name="service-likelihood">
+							<input type="radio" value="Seven" id='llh-7' name="service-likelihood">
 							<label for="llh-7">7</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-8' name="service-likelihood">
+							<input type="radio" value="Eight" id='llh-8' name="service-likelihood">
 							<label for="llh-8">8</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-9' name="service-likelihood">
+							<input type="radio" value="Nine" id='llh-9' name="service-likelihood">
 							<label for="llh-9">9</label>						
 						</div>
 						<div class='option'>
-							<input type="radio" value="One" id='llh-10' name="service-likelihood">
+							<input type="radio" value="Ten" id='llh-10' name="service-likelihood">
 							<label for="llh-10">10 (Very Likely)</label>						
 						</div>
 					</div>
 					<p>What services would you like to see us offer in the future that are not offered now? (optional)</p>
-					<textarea id='service-comments' placeholder="I wish that Jay Software Solutions did..."></textarea>
+					<textarea id='service-comments' name='service-comments' placeholder="I wish that Jay Software Solutions did..."></textarea>
 					<button type='button' class='next'>Next</button>
 				</div>
 				<div class='website-recommendations'>
@@ -254,7 +253,7 @@
 						</div>
 					</div>
 					<p>What comments do you have about our website? (optional)</p>
-					<textarea id='service-comments' placeholder="The animated logo is awesome but I don't like..."></textarea>
+					<textarea id='website-comments' name='website-comments' placeholder="The animated logo is awesome but I don't like..."></textarea>
 					<button type='submit' class='submit'>Submit</button>
 				</div>
 			</div>

@@ -58,15 +58,33 @@ $(document).ready(function() {
 		let c = circles[index];
 		$(c).css('fill', 'hsla(205, 100%, 45%, 1)');
 	}
+	
   	$('button.begin').on('click', function() {
-		changeDisplay('div.instructional', 'div.form');
-		colorProgressCircle(1);
-		$('footer').css('position', 'static');
-		clearInterval(timingFunction);
+		let proceed = true;
+		if (now < start) {
+			proceed = confirm('Warning: This sweepstakes may not have started yet! Do you still wish to continue?');
+		}
+		if (now > end) {
+			proceed = confirm('Warning: This sweepstakes may have ended! Do you still wish to continue?');
+		}
+		if (proceed) {
+			changeDisplay('div.instructional', 'div.form');
+			colorProgressCircle(1);
+			$('footer').css('position', 'static');
+			clearInterval(timingFunction);
+		}
   	});
 	$('div.general button.next').on('click', function() {
-	  	changeDisplay('div.general', 'div.services-budget');
-	  	colorProgressCircle(2);
+		if (!validName()) {
+			alert('Please enter a valid name');
+		}
+		else if (!validEmail()) {
+			alert('Please enter a valid email address');
+		}
+		else {
+			changeDisplay('div.general', 'div.services-budget');
+	  		colorProgressCircle(2);
+		}
 	});
 	$('div.services-budget .option input').change(function() {
 		let thisID = $(this).attr('id');
@@ -84,8 +102,33 @@ $(document).ready(function() {
 		colorProgressCircle(3);
 	});
 	$('div.services-recommendations button.next').on('click', function() {
-		changeDisplay('div.services-recommendations', 'div.website-recommendations');
-		colorProgressCircle(4);
+		if (validLikelihood()) {
+			changeDisplay('div.services-recommendations', 'div.website-recommendations');
+			colorProgressCircle(4);
+		}
+		else alert('Please select a likelihood.')
 	});
+	
+//	VALIDATION
+	function validName() {
+		let name = $('#ent-name').val();
+		if (name.length <= 2) {
+			return false;
+		}
+		else return true;
+	}
+	function validEmail() {
+		let email = $('#ent-email').val();
+ 		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) return true;
+		else return false;
+}
+	function validLikelihood() {
+		let value = $('input[name=service-likelihood]:checked').val();
+		console.log(value);
+		if (value === undefined) {
+			return false;
+		}
+		else return true;
+	}
 	
 });
