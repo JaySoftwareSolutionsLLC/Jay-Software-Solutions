@@ -3,11 +3,11 @@
 	if (!isset($_POST['ent-name'])) $errors .= "It looks like you didn't fill out your name!<br>";
 	if (!isset($_POST['ent-email']))	$errors .= "It looks like you didn't fill out your email!<br>";
 	if (!isset($_POST['service-likelihood'])) $errors .= "It looks like you didn't answer how likely you were to use a service!<br>"; 
-	date_default_timezone_set('EST');
+	date_default_timezone_set('America/NEW_YORK');
 	$curTime = time();
 	$curTime = $curTime * 1000;
-//	if ($curTime < 1520226000000) $errors .= "This sweepstakes hasn't started yet!<br>";
-//	if ($cutTime > 1521863999000) $errors .= "This sweepstakes has ended!<br>";
+	if ($curTime < 1520226000000) $errors .= "This sweepstakes hasn't started yet!<br>";
+	if ($cutTime > 1521863999000) $errors .= "This sweepstakes has ended!<br>";
 	
 	if ($errors != "") {
 		?>
@@ -112,10 +112,12 @@
 	<?php
 	}
 
-	$entrant = $_POST['ent-name'];
-	$entrant_email = $_POST['ent-email'];
-	$entrant_company = $_POST['ent-comp'];
-	$referrer = $_POST['ref-name'];
+/*--- Entrant Info ---*/
+
+	$entrant = (string)$_POST['ent-name'];
+	$entrant_email = (string)$_POST['ent-email'];
+	$entrant_company = (string)$_POST['ent-comp'];
+	$referrer = (string)$_POST['ref-name'];
 
 	$services = $_POST['services'];
 	$num_services = count($services);
@@ -132,6 +134,8 @@
       return str_replace($bad,"",$string);
     }
 		
+/*--- Email Creation ---*/
+
 	$email_to = "brettbrewster@jaysoftwaresolutions.com";
 	$email_subject = "New Sweepstakes entry from".clean_string($entrant)."\n";
 	$email_message = "Form details:\n\n";
@@ -156,5 +160,59 @@
 
 	$headers = "From: ".clean_string($entrant_email)."\r\n";
 	mail($email_to,$email_subject,$email_message,$headers);
-//	header('Location: thanks.html');
+
+/*--- DataBase ---*/
+
+	$SQLserv = 'localhost';
+	$SQLuser = 'jaysoftw_guest';
+	$SQLpass = 'password1234';
+	$SQLdbase = 'jaysoftw_opening_sweepstakes';
+
+	$conn = new mysqli($SQLserv, $SQLuser, $SQLpass, $SQLdbase);
+	if (!$conn) {
+		die("Connection to server failed: " . mysqli_connect_errno());
+	}
+	echo "Successfully Connected!<br>";
+
+	if (empty($entrant_company)) $entrant_company = 'NULL';
+	if (empty($referrer)) $referrer = 'NULL';
+	$insertEntry = "INSERT INTO Entries (name, email, company, referrer) VALUES ('".$entrant."','".$entrant_email."','".$entrant_company."','".$referrer."')";
+	if ($conn->query($insertEntry) === TRUE) {
+		echo "New Entry Successfully Created.<br>";
+	} else {
+		echo "Error: " . $insertService . "<br>" . $conn->error;
+	}
+
+	for ($i=0; $i < $num_services; $i++) {
+		$serv = $services[$i];
+		$replacing = array("-");
+		str_replace($replacing," ",$serv);
+		$servBudgStr = $serv . "-budget";
+		$servBudg = (int)$_POST[$servBudgStr];
+		if ($servBudg == 0) $servBudg = '???';
+		$insertBudget = "INSERT INTO `Budget Reviews` (entrant, service, budget) VALUES ('".$entrant."','".$serv."','".$servBudg."')";
+		if ($conn->query($insertBudget) === TRUE) {
+			echo "New Budget Successfully Added.";
+		} else {
+			echo "Error: " . $insertBudget . "<br>" . $conn->error;
+		}		
+	}
+
+	if (empty($service_comments)) $service_comments = 'NULL';
+	if (empty($website_review)) $website_review = 'NULL';
+	if (empty($website_comments)) $website_comments = 'NULL';
+	$insertReview = "INSERT INTO `General Reviews` (entrant, service_likelihood, service_comments, website_review, website_comments) VALUES ('".$entrant."','".$service_likelihood."','".$service_comments."','".$website_review."','".$website_comments."')";
+	if ($conn->query($insertReview) === TRUE) {
+		echo "New Review Successfully Entered.<br>";
+	} else {
+		echo "Error: " . $insertReview . "<br>" . $conn->error;
+	}
+
+	$conn->close();
+
+	unset($_POST);
+
+	echo $_POST['ent-name'];
+	
+	header('Location: sweepstakes_thanks.html');
 ?>

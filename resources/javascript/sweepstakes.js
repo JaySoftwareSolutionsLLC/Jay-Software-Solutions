@@ -109,7 +109,7 @@ $(document).ready(function() {
 		else alert('Please select a likelihood.')
 	});
 	
-//	VALIDATION
+/*--- VALIDATION ---*/
 	function validName() {
 		let name = $('#ent-name').val();
 		if (name.length <= 2) {
@@ -131,4 +131,23 @@ $(document).ready(function() {
 		else return true;
 	}
 	
+/*--- PREVENT ENTER FROM SUBMITTING AND BACKSPACE FROM BACKING OUT ---*/
+	$(function(){
+		 var keyStop = {
+		   8: ":not(input:text, textarea, input:file, input:password)", // stop backspace = back
+		   13: "input:text, input:password", // stop enter = submit 
+
+		   end: null
+		 };
+		 $(document).bind("keydown", function(event){
+		  var selector = keyStop[event.which];
+
+		  if(selector !== undefined && $(event.target).is(selector)) {
+			  event.preventDefault(); //stop event
+		  }
+		  return true;
+		 });
+	});
+	
+
 });
